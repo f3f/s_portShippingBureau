@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>智慧港航平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/common.min.css">
+    <style>
+        .BMap_Marker{animation: yyks .5s linear infinite alternate;}
+    </style>
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/echarts-all-3.js"></script>
+    <script src="../Lib/echarts-engine.js"></script>
+</head>
+<body class="index">
+<div id="wrapper">
+<div class="head-bg">
+    <div class="head">
+        <div class="head-left">
+            <h3>
+                <span>智慧港航平台</span>
+            </h3>
+            <ul class="nav-top">
+                <!--<li><a class="active" href="#"><span>首页</span></a></li>-->
+                <!--<li><a href="#"><span>港务互联互通平台</span></a></li>-->
+                <!--<li><a href="#"><span>供应链金融平台</span></a></li>-->
+                <!--<li><a href="#"><span>航运调度融合平台</span></a></li>-->
+                <!--<li><a href="#"><span>综合信息发布平台</span></a></li>-->
+                <!--<li><a href="#"><span>港务大数据分析平台</span></a></li>-->
+            </ul>
+        </div>
+        <div class="head-right">
+            <div class="search">
+                <input type="text" placeholder="请输入港口" name="">
+                <i class="iconfont icon-sousuo_sousuo"></i>
+            </div>
+            <div class="weather">
+                <div class="weather-area">
+                    <span>济宁</span>
+                    <i class="iconfont icon-jiantou2"></i>
+                </div>
+                <div class="weather-detail">
+                    <div>晴</div>
+                    <div>
+                        <span>-2/13</span>
+                        <span>&#8451;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="nav-bar-bg">
+    <ul class="nav-bar">
+        <li>
+            <a class="index" href="index.html">
+                <div>
+                    <i class="iconfont icon-icongk"></i>
+                    <span>港口基础信息</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="dangerPort" href="dangerPort.html">
+                <div>
+                    <i class="iconfont icon-jiankong"></i>
+                    <span>港口危险源监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="dangerGoods" href="dangerGoods.html">
+                <div>
+                    <i class="iconfont icon-huo"></i>
+                    <span>危险品运输监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="shippingMonit" href="shippingMonit.html">
+                <div>
+                    <i class="iconfont icon-tongji"></i>
+                    <span>航运监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="emergenceMeasure" href="emergenceMeasure.html">
+                <div>
+                    <i class="iconfont icon-biaoqianshutiao"></i>
+                    <span>应急处理</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="prediction1" href="prediction1.html">
+                <div>
+                    <i class="iconfont icon-1"></i>
+                    <span>预警信息</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="content">
+
+<div id="bMap" class="map"></div>
+<ul class="bMapTypeControl">
+    <li class="hover"><i class="iconfont icon-location" style="font-size:16px;"></i>地图</li>
+    <li><i class="iconfont icon-iconweixing"></i>卫星</li>
+    <li>
+        <i class="iconfont icon-ceju"></i>测距
+        <div class="bMapTypeControlCj">
+            <div class="bMapTypeControlCj_tit">
+                <p>测距</p>
+                <span>X</span>
+            </div>
+            <div class="bMapTypeControlCj_cont">
+                <p>累计长度： 0.000米（0.000海里）</p>
+                <p>当前长度： 0.000米（0.000海里）</p>
+                <p>当前方位： 0.000度</p>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<ul class="ct-right">
+    <li class="box">
+        <div class="angle">货物统计</div>
+        <div class="box-bg">
+            <div id="chart_hwtj" class="box-ct"></div>
+        </div>
+    </li>
+    <li class="box">
+        <div class="angle">船舶统计</div>
+        <div class="box-bg">
+            <div id="chart_cbtj" class="box-ct"></div>
+        </div>
+    </li>
+    <li class="box">
+        <div class="angle">吞吐量</div>
+        <div class="box-bg">
+            <div id="chart_ttl" class="box-ct"></div>
+        </div>
+    </li>
+</ul>
+
+</div>
+</div>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CP5vabjbBI1GI6S5vwQTWqxjgT1zsiFQ"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/CurveLine/1.5/src/CurveLine.min.js"></script>
+<script src="../js/index.js"></script>
+</body>
+</html>

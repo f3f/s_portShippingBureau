@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>福建港航局</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/common.min.css">
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<div class="head-bg">
+    <div class="head">
+        <div class="head-left">
+            <h3>
+                <span>港航大数据平台</span>
+            </h3>
+            <ul class="nav-top">
+                <!--<li><a class="active" href="#"><span>首页</span></a></li>-->
+                <!--<li><a href="#"><span>大数据综合指数</span></a></li>-->
+                <!--<li><a href="#"><span>金融保险服务</span></a></li>-->
+                <!--<li><a href="#"><span>从业大数据平台</span></a></li>-->
+                <!--<li><a href="#"><span>综合信息发布平台</span></a></li>-->
+                <!--<li><a href="#"><span>物流订货平台</span></a></li>-->
+            </ul>
+        </div>
+        <div class="head-right">
+            <div class="search">
+                <input type="text" value="请输入港口" name="">
+                <i class="iconfont icon-sousuo_sousuo"></i>
+            </div>
+            <div class="weather">
+                <div class="weather-area">
+                    <span>济宁</span>
+                    <i class="iconfont icon-jiantou2"></i>
+                </div>
+                <div class="weather-detail">
+                    <div>晴</div>
+                    <div>
+                        <span>-2/13</span>
+                        <span>&#8451;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav-bar-bg">
+    <ul class="nav-bar">
+        <li>
+            <a class="active" href="">
+                <div>
+                    <i class="iconfont icon-icongk"></i>
+                    <span>港口基础信息</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div>
+                    <i class="iconfont icon-shijianjiankong"></i>
+                    <span>港口危险源监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div>
+                    <i class="iconfont icon-huo"></i>
+                    <span>危险品运输监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div>
+                    <i class="iconfont icon-tongji"></i>
+                    <span>航运监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div>
+                    <i class="iconfont icon-biaoqianshutiao"></i>
+                    <span>应急处理</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div>
+                    <i class="iconfont icon-1"></i>
+                    <span>预警信息</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    var localUrl = window.location.href;
+
+    if (localUrl.indexOf('indexList') >= 0) { //首页
+        spIndex = 0;
+    } else if (localUrl.indexOf('allVideo') >= 0) { //统计数据
+        spIndex = 1;
+    } else if (localUrl.indexOf('audit_res') >= 0) { //影视审核
+        spIndex = 2;
+    } else if (localUrl.indexOf('audit_organ') >= 0) { //出品机构
+        spIndex = 3;
+    } else{
+         spIndex = 0;
+    }
+
+    $(".nav > li").children('a').removeClass('active')
+        .closest('li').eq(spIndex).addClass('active');
+
+
+</script>
+<div class="content">
+
+
+<ul class="ct-right">
+    <li class="box">
+        <div class="angle">海务走私实时预警</div>
+        <div class="box-bg">
+            <div class="box-ct">
+
+            </div>
+        </div>
+    </li>
+    <li class="box">
+        <div class="angle">海务走势事件趋势及预测</div>
+        <div class="box-bg">
+            <div class="box-ct"></div>
+        </div>
+    </li>
+    <li class="box">
+        <div class="angle">海务走私案件类型</div>
+        <div class="box-bg">
+            <div class="box-ct"></div>
+        </div>
+    </li>
+</ul>
+
+</div>
+<ul class="footer">
+    <li>
+        <a class="prediction1" href="prediction1.html">
+            <div>
+                <i class="iconfont icon-jingzhi"></i>
+                <span>海务走私预警</span>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a class="prediction2" href="prediction2.html">
+            <div>
+                <i class="iconfont icon-dunpaieps"></i>
+                <span>港行安全预警</span>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a class="prediction3" href="prediction3.html">
+            <div>
+                <i class="iconfont icon-weixianyuan"></i>
+                <span>危险品扩散预警</span>
+            </div>
+        </a>
+    </li>
+</ul>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>智慧港航平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/common.min.css">
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/echarts-all-3.js"></script>
+    <script src="../Lib/echarts-engine.js"></script>
+</head>
+<body class="prediction1">
+<div id="wrapper">
+<div class="head-bg">
+    <div class="head">
+        <div class="head-left">
+            <h3>
+                <span>智慧港航平台</span>
+            </h3>
+            <ul class="nav-top">
+                <!--<li><a class="active" href="#"><span>首页</span></a></li>-->
+                <!--<li><a href="#"><span>港务互联互通平台</span></a></li>-->
+                <!--<li><a href="#"><span>供应链金融平台</span></a></li>-->
+                <!--<li><a href="#"><span>航运调度融合平台</span></a></li>-->
+                <!--<li><a href="#"><span>综合信息发布平台</span></a></li>-->
+                <!--<li><a href="#"><span>港务大数据分析平台</span></a></li>-->
+            </ul>
+        </div>
+        <div class="head-right">
+            <div class="search">
+                <input type="text" placeholder="请输入港口" name="">
+                <i class="iconfont icon-sousuo_sousuo"></i>
+            </div>
+            <div class="weather">
+                <div class="weather-area">
+                    <span>济宁</span>
+                    <i class="iconfont icon-jiantou2"></i>
+                </div>
+                <div class="weather-detail">
+                    <div>晴</div>
+                    <div>
+                        <span>-2/13</span>
+                        <span>&#8451;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="nav-bar-bg">
+    <ul class="nav-bar">
+        <li>
+            <a class="index" href="index.html">
+                <div>
+                    <i class="iconfont icon-icongk"></i>
+                    <span>港口基础信息</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="dangerPort" href="dangerPort.html">
+                <div>
+                    <i class="iconfont icon-jiankong"></i>
+                    <span>港口危险源监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="dangerGoods" href="dangerGoods.html">
+                <div>
+                    <i class="iconfont icon-huo"></i>
+                    <span>危险品运输监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="shippingMonit" href="shippingMonit.html">
+                <div>
+                    <i class="iconfont icon-tongji"></i>
+                    <span>航运监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="emergenceMeasure" href="emergenceMeasure.html">
+                <div>
+                    <i class="iconfont icon-biaoqianshutiao"></i>
+                    <span>应急处理</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="prediction1" href="prediction1.html">
+                <div>
+                    <i class="iconfont icon-1"></i>
+                    <span>预警信息</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="content">
+
+<div class="map">
+    <img src="../images/prediction1.jpg">
+</div>
+
+<ul class="ct-right">
+    <li class="box">
+        <div class="angle">水务走私实时预警</div>
+        <div class="box-bg">
+            <div class="box-ct prediction">
+                <ul>
+                    <li>
+                        <div class="pre-icon">
+                            <i class="iconfont icon-jingzhi"></i>
+                        </div>
+                        <div>
+                            <div class="time">2017-1-10 10:10</div>
+                            <p>在微山港鲁运6A01船舶走私钢铁</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pre-icon">
+                            <i class="iconfont icon-jingzhi"></i>
+                        </div>
+                        <div>
+                            <div class="time">2017-1-10 10:10</div>
+                            <p>在微山港鲁运6F320船舶走钢铁</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="more">
+                    <span>更多</span>
+                    <i class="iconfont icon-jiantou"></i>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="box">
+        <div class="angle">水务走私事件趋势及预测</div>
+        <div class="box-bg posR">
+            <ul class="easyTab">
+                <li class="hover"><span>日预测</span></li>
+                <li><span>周预测</span></li>
+                <li><span>月预测</span></li>
+            </ul>
+            <div id="chart_swyc" class="box-ct"></div>
+        </div>
+    </li>
+    <li class="box">
+        <div class="angle">水务走私案件类型</div>
+        <div class="box-bg">
+            <div id="chart_swzs" class="box-ct"></div>
+        </div>
+    </li>
+</ul>
+
+</div>
+<ul class="footer">
+    <li>
+        <a class="prediction1" href="prediction1.html">
+            <div>
+                <i class="iconfont icon-jingzhi"></i>
+                <span>水务走私预警</span>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a class="prediction2" href="prediction2.html">
+            <div>
+                <i class="iconfont icon-dunpaieps"></i>
+                <span>港行安全预警</span>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a class="prediction3" href="prediction3.html">
+            <div>
+                <i class="iconfont icon-weixianyuan"></i>
+                <span>危险品扩散预警</span>
+            </div>
+        </a>
+    </li>
+</ul>
+
+</div>
+<script src="../js/prediction.js"></script>
+</body>
+</html>

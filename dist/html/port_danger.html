@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>济宁智慧港航平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/common.min.css">
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<div class="head-bg">
+    <div class="head">
+        <div class="head-left">
+            <h3>
+                <span>智慧港航平台</span>
+            </h3>
+            <ul class="nav-top">
+                <!--<li><a class="active" href="#"><span>首页</span></a></li>-->
+                <!--<li><a href="#"><span>港务互联互通平台</span></a></li>-->
+                <!--<li><a href="#"><span>供应链金融平台</span></a></li>-->
+                <!--<li><a href="#"><span>航运调度融合平台</span></a></li>-->
+                <!--<li><a href="#"><span>综合信息发布平台</span></a></li>-->
+                <!--<li><a href="#"><span>港务大数据分析平台</span></a></li>-->
+            </ul>
+        </div>
+        <div class="head-right">
+            <div class="search">
+                <input type="text" placeholder="请输入港口" name="">
+                <i class="iconfont icon-sousuo_sousuo"></i>
+            </div>
+            <div class="weather">
+                <div class="weather-area">
+                    <span>济宁</span>
+                    <i class="iconfont icon-jiantou2"></i>
+                </div>
+                <div class="weather-detail">
+                    <div>晴</div>
+                    <div>
+                        <span>-2/13</span>
+                        <span>&#8451;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="nav-bar-bg">
+    <ul class="nav-bar">
+        <li>
+            <a class="index" href="index.html">
+                <div>
+                    <i class="iconfont icon-icongk"></i>
+                    <span>港口基础信息</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="dangerPort" href="dangerPort.html">
+                <div>
+                    <i class="iconfont icon-jiankong"></i>
+                    <span>港口危险源监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="dangerGoods" href="dangerGoods.html">
+                <div>
+                    <i class="iconfont icon-huo"></i>
+                    <span>危险品运输监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="shippingMonit" href="shippingMonit.html">
+                <div>
+                    <i class="iconfont icon-tongji"></i>
+                    <span>航运监控</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="emergenceMeasure" href="emergenceMeasure.html">
+                <div>
+                    <i class="iconfont icon-biaoqianshutiao"></i>
+                    <span>应急处理</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="prediction1" href="prediction1.html">
+                <div>
+                    <i class="iconfont icon-1"></i>
+                    <span>预警信息</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="content">
+
+<div class="map">
+    <img src="../images/emergenceMeasure.jpg" height="1080" width="1920">
+</div>
+
+
+<!-- 船舶信息 -->
+ <div class="pop-boat">
+    <div class="pop-top">
+        <div class="angle">船舶详情</div>
+        <div class="pop-close"></div>
+    </div>
+    <div class="boat-ct">
+        <div class="boat-left">
+            <div class="boat-for-img">
+                <img src="../images/boat_info.jpg">
+            </div>
+            <span>AS0001</span>
+        </div>
+        <div class="boat-right">
+            <table class="boat-table">
+                <thead>
+                    <tr>
+                        <th colspan="3">船舶基本信息</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>船舶登记号：</span><span>AS001</span></td>
+                        <td><span>中文船名：</span><span>祁门</span></td>
+                        <td><span>英文船名：</span><span>QIMEN</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>船舶呼号：</span><span>BIBQ2</span></td>
+                        <td><span>IMO编号：</span><span>9532044</span></td>
+                        <td><span>船舶种类：</span><span>货船</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>MMSI：</span><span>235064475</span></td>
+                        <td><span>235064475：</span><span>中国</span></td>
+                        <td><span>船籍港：</span><span>上海</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>船速：</span><span>15kts</span></td>
+                        <td><span>建造厂：</span><span>山东</span></td>
+                        <td><span>造船地点：</span><span>山东</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>造船时间：</span><span>2015－10－10</span></td>
+                        <td><span>安放龙骨日期：</span><span>2015－10－12</span></td>
+                        <td><span>下水日期：</span><span>2015－10－10</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="boat-table">
+                <thead>
+                    <tr>
+                        <th colspan="3">船体信息</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>船舱数：</span><span>10个</span></td>
+                        <td><span>甲板数：</span><span>5个</span></td>
+                        <td><span>总长：</span><span>120m</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>型宽：</span><span>10m</span></td>
+                        <td><span>型深：</span><span>12m</span></td>
+                        <td><span>吃水：</span><span>6m</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>排水量：</span><span>XXX</span></td>
+                        <td><span>冷藏舱数：</span><span>XXX</span></td>
+                        <td><span>冷藏总容积：</span><span>XXX</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>货舱数：</span><span>XXX</span></td>
+                        <td><span>货舱总容积：</span><span>XXX</span></td>
+                        <td><span></span><span></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="boat-table">
+                <thead>
+                    <tr>
+                        <th colspan="3">主机吨位</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>主机制造商：</span><span>XXX</span></td>
+                        <td><span>主机种类：</span><span>XXX</span></td>
+                        <td><span>主机燃料：</span><span>XXX</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>主机型号：</span><span>XXX</span></td>
+                        <td><span>主机速率：</span><span>XXX</span></td>
+                        <td><span>主机性能：</span><span>XXX</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>排水量：：</span><span>XXX</span></td>
+                        <td><span>冷藏舱数：：</span><span>XXX</span></td>
+                        <td><span>冷藏总容积：：</span><span>XXX</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>主机建造地点：</span><span>XXX</span></td>
+                        <td><span>主机建造时间：</span><span>XXX</span></td>
+                        <td><span>主机总功率：</span><span>XXX</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>总吨位：</span><span>10T</span></td>
+                        <td><span>载重吨：</span><span>7T</span></td>
+                        <td><span>静吨位：</span><span>8T</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="boat-table">
+                <thead>
+                    <tr>
+                        <th colspan="3">船舶所有人</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>船舶所有人：</span><span>XXX</span></td>
+                        <td><span>联系人：</span><span>XXX</span></td>
+                        <td><span>电话：</span><span>XXX</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>邮箱：</span><span>XXX</span></td>
+                        <td><span>传真：</span><span>XXX</span></td>
+                        <td><span>地址：</span><span>XXX</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>船舶经营人：</span><span>XXX</span></td>
+                        <td><span></span><span></span></td>
+                        <td><span></span><span></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="boat-table boat-special">
+                <thead>
+                    <tr>
+                        <th colspan="4">船检信息</th>
+                    </tr>
+                    <tr>
+                        <th>检验时间</th>
+                        <th>检验地点</th>
+                        <th>检验人</th>
+                        <th>检验种类</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2007-12-10</td>
+                        <td>济宁</td>
+                        <td>船舶检验局</td>
+                        <td>初次检验</td>
+                    </tr>
+                    <tr>
+                        <td>2017-12-10</td>
+                        <td>大连</td>
+                        <td>船舶检验局</td>
+                        <td>年度检验</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- 船员信息 -->
+<div class="pop-boat">
+    <div class="pop-top">
+        <div class="angle">船员详情</div>
+        <div class="pop-close"></div>
+    </div>
+    <div class="boat-ct">
+        <div class="boat-left">
+            <div class="boat-for-img">
+                <img src="../images/boat_sailor.jpg">
+            </div>
+            <span>宋仲基(大副)</span>
+        </div>
+        <div class="boat-right">
+            <table class="boat-table">
+                <thead>
+                    <tr>
+                        <th colspan="3">基本信息</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>姓名：</span><span>宋仲基</span></td>
+                        <td><span>身份证号：</span><span>110223198012122300</span></td>
+                        <td><span>现任职务：</span><span>大幅</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>性别：</span><span>男</span></td>
+                        <td><span>民族：</span><span>汉</span></td>
+                        <td><span>国籍：</span><span>中国</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>身高：</span><span>180cm</span></td>
+                        <td><span>体重：</span><span>63Kg</span></td>
+                        <td><span>血型：</span><span>O型</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>出生日期：</span><span>1980-12-12</span></td>
+                        <td><span>出生地点：</span><span>XXXXXX</span></td>
+                        <td><span>婚姻状况：</span><span>已婚</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>联系方式：</span><span>18912312300</span></td>
+                        <td><span>电子邮箱：</span><span>cyc@msa.gov.cn</span></td>
+                        <td><span>邮政编码：</span><span>22323</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>应急联系人：</span><span>张大鹏</span></td>
+                        <td><span>应急联系人方式：</span><span>18514236888</span></td>
+                        <td><span>工作鞋号：</span><span>XXX</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>家庭现住址：</span><span>XXXXX</span></td>
+                        <td><span>户籍地址：</span><span>XXXXX</span></td>
+                        <td><span>健康状况：</span><span>良好</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>慢性病史：</span><span>XXXXX</span></td>
+                        <td><span>其它病史：</span><span>XXXXX</span></td>
+                        <td><span></span><span></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="boat-table">
+                <thead>
+                    <tr>
+                        <th colspan="3">教育信息</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>教育类别：</span><span>航海类</span></td>
+                        <td><span>毕业院校：</span><span>XX学校</span></td>
+                        <td><span>毕业时间：</span><span>XXXXX</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>专业：</span><span>驾驶</span></td>
+                        <td><span>学历：</span><span>大专</span></td>
+                        <td><span>学位：</span><span>XXXX</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>毕业证书号：</span><span>XXXXXX</span></td>
+                        <td><span></span><span></span></td>
+                        <td><span></span><span></span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="boat-table boat-special">
+                <thead>
+                    <tr>
+                        <th colspan="5">证书信息</th>
+                    </tr>
+                    <tr>
+                        <th>证书名称</th>
+                        <th>编号</th>
+                        <th>发证时间</th>
+                        <th>到期时间</th>
+                        <th>签发机关</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>服务薄</td>
+                        <td>0901100637</td>
+                        <td>2007-04-05</td>
+                        <td>2017-04-05</td>
+                        <td>0901100637</td>
+                    </tr>
+                    <tr>
+                        <td>适任证书</td>
+                        <td>0901100637</td>
+                        <td>2007-04-05</td>
+                        <td>2017-04-05</td>
+                        <td>0901100637</td>
+                    </tr>
+                    <tr>
+                        <td>海员证</td>
+                        <td>0901100637</td>
+                        <td>2007-04-05</td>
+                        <td>2017-04-05</td>
+                        <td>0901100637</td>
+                    </tr>
+                    <tr>
+                        <td>高级消防培训</td>
+                        <td>0901100637</td>
+                        <td>2007-04-05</td>
+                        <td>2017-04-05</td>
+                        <td>0901100637</td>
+                    </tr>
+                    <tr>
+                        <td>精通急救</td>
+                        <td>0901100637</td>
+                        <td>2007-04-05</td>
+                        <td>2017-04-05</td>
+                        <td>0901100637</td>
+                    </tr>
+                    <tr>
+                        <td>船上医护</td>
+                        <td>0901100637</td>
+                        <td>2007-04-05</td>
+                        <td>2017-04-05</td>
+                        <td>0901100637</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="boat-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">指纹信息</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>左食指：</span><span>已录</span></td>
+                        <td><span>右食指：</span><span>已录</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="boat-table boat-special">
+                <thead>
+                    <tr>
+                        <th colspan="7">海上工作经历</th>
+                    </tr>
+                    <tr>
+                        <th>船名</th>
+                        <th>船舶类型/总吨</th>
+                        <th>主机型号/马力</th>
+                        <th>职务</th>
+                        <th>上下船时间</th>
+                        <th>公司名称</th>
+                        <th>航线</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>北航10</td>
+                        <td>散 6070</td>
+                        <td>柴 3950</td>
+                        <td>船长</td>
+                        <td>柴 3950</td>
+                        <td>济宁金帆公司</td>
+                        <td>南北</td>
+                    </tr>
+                    <tr>
+                        <td>北航10</td>
+                        <td>散 6070</td>
+                        <td>柴 3950</td>
+                        <td>船长</td>
+                        <td>柴 3950</td>
+                        <td>济宁金帆公司</td>
+                        <td>南北</td>
+                    </tr>
+                    <tr>
+                        <td>北航10</td>
+                        <td>散 6070</td>
+                        <td>柴 3950</td>
+                        <td>船长</td>
+                        <td>柴 3950</td>
+                        <td>济宁金帆公司</td>
+                        <td>南北</td>
+                    </tr>
+                    <tr>
+                        <td>北航10</td>
+                        <td>散 6070</td>
+                        <td>柴 3950</td>
+                        <td>船长</td>
+                        <td>柴 3950</td>
+                        <td>济宁金帆公司</td>
+                        <td>南北</td>
+                    </tr>
+                    <tr>
+                        <td>北航10</td>
+                        <td>散 6070</td>
+                        <td>柴 3950</td>
+                        <td>船长</td>
+                        <td>柴 3950</td>
+                        <td>济宁金帆公司</td>
+                        <td>南北</td>
+                    </tr>
+                    <tr>
+                        <td>北航10</td>
+                        <td>散 6070</td>
+                        <td>柴 3950</td>
+                        <td>船长</td>
+                        <td>柴 3950</td>
+                        <td>济宁金帆公司</td>
+                        <td>南北</td>
+                    </tr>
+                    <tr>
+                        <td>北航10</td>
+                        <td>散 6070</td>
+                        <td>柴 3950</td>
+                        <td>船长</td>
+                        <td>柴 3950</td>
+                        <td>济宁金帆公司</td>
+                        <td>南北</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+</body>
+</html>

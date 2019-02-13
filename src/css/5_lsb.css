@@ -1,0 +1,71 @@
+.eightPort-all {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.eightPort-all > img {
+    height: 100%;
+    width: 100%;
+}
+
+.eightPort-all > ul > li {
+    width: 87px;
+    height: 26px;
+    background: url("../images/textBack.png");
+    background-size: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.eightPort-all > ul > li > a {
+    color: #ffffff;
+}
+
+.eightPort-all > ul > li:nth-child(1) {
+    top: 205px;
+    left: 404px;
+}
+
+.eightPort-all > ul > li:nth-child(2) {
+    top: 320px;
+    left: 680px;
+}
+
+.eightPort-all > ul > li:nth-child(3) {
+    top: 470px;
+    left: 884px;
+}
+
+.eightPort-all > ul > li:nth-child(4) {
+    top: 566px;
+    left: 1166px;
+}
+
+.eightPort-all > ul > li:nth-child(5) {
+    top: 737px;
+    left: 1460px;
+}
+
+.eightPort-all > ul > li:nth-child(6) {
+    top: 207px;
+    left: 1107px;
+}
+
+.eightPort-all > ul > li:nth-child(7) {
+    top: 408px;
+    left: 1332px;
+}
+
+.eightPort-all > ul > li:nth-child(8) {
+    top: 514px;
+    left: 1527px;
+}
+.eightPort2-all{
+    height: 100vh;
+    width: 100%;
+}
+.eightPort2-all > img {
+    width: 100%;
+    height: 100%;
+}

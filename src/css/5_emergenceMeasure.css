@@ -1,0 +1,58 @@
+.scene-info .box-bg {
+    height: 86%!important;
+}
+
+.for-img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.for-img > img {
+    width: 100%;
+    height: auto;
+}
+
+.secne-time {
+    padding: 10px 30px;
+    margin: 10px auto;
+    background: #0A1F2E;
+}
+
+.secne-time > div {
+    font-size: 16px;
+}
+.secne-time > h3 {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 2;
+}
+
+.secne-info-detail {
+    background: #0A1F2E;
+}
+
+.secne-info-detail > li {
+    height: 110px;
+    line-height: 110px;
+    font-size: 0;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+    text-align-last:justify;
+    -moz-text-align-last:justify;
+    -webkit-text-align-last:justify;
+    margin: 0 30px;
+    border-bottom: 1px dashed  #fff;
+}
+
+.secne-info-detail > li:last-child {
+    border-bottom: none;
+}
+
+.secne-info-detail > li ol, .secne-info-detail > li div {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+    text-align-last: left;
+}

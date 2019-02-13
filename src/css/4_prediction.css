@@ -1,0 +1,62 @@
+.prediction {
+    padding: 16px 16px 50px;
+    color: #8ebfec;
+    position: relative;
+}
+.prediction li {
+    border-bottom: 1px dashed #6A7C89;
+    font-size: 0;
+    padding: 8px 0;
+}
+.prediction li:first-child {
+    padding-top: 0;
+}
+.prediction li > div {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.prediction li .pre-icon {
+    margin-right: 14px;
+    border-radius: 50%;
+    /*background: #000;*/
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+.prediction li i {
+    font-size: 30px;
+}
+.prediction .time {
+    color: #fff;
+}
+
+.prediction .more {
+    position: absolute;
+    bottom: 13px;
+    right: 10px;
+    cursor: pointer;
+}
+.prediction .more:hover {
+    color: #0085ff;
+}
+
+body.prediction1 .pre-icon {
+    background: #66B9FF;
+}
+body.prediction2 .pre-icon {
+    background: #00FFE4;
+}
+body.prediction3 .pre-icon {
+    background: #FF4000;
+}
+body.prediction1 .pre-icon i {
+    color: #335c7f;
+}
+body.prediction2 .pre-icon i {
+    color: #007F72;
+}
+body.prediction3 .pre-icon i {
+    color: #7F2000;
+}

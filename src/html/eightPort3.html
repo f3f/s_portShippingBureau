@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>济宁智慧港航平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/common.min.css">
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/echarts-all-3.js"></script>
+    <script src="../Lib/echarts-engine.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=HbUVYMUg6PwbOnXkztdgSQlQ"></script>
+</head>
+<body class="eightPort3">
+<div id="wrapper">
+    @@include('./include/head.html')
+    @@include('./include/nav_bar.html')
+    <div class="content">
+
+        <div id="allmap" style="width: 100%;height: 100vh;"></div>
+
+    </div>
+    @@include('./include/eightPort_foot.html')
+</div>
+<div id="cover"></div>
+
+<div id="eightPortPop1" class="pop-water popBox">
+    <div class="pop-top">
+        <div class="angle">水位传感JL001</div>
+        <div class="pop-close" onclick="hide('cover','eightPortPop1')"></div>
+    </div>
+    <div class="box-bg">
+        <div class="box-ct water-ct">
+            <ul class="water-left">
+                <li>
+                    <span>水深：</span>
+                    <span>4.376m</span>
+                </li>
+                <li>
+                    <span>淤泥厚度：</span>
+                    <span>2.45m</span>
+                </li>
+                <li>
+                    <span>流速：</span>
+                    <span>2.33m/s</span>
+                </li>
+                <li>
+                    <span>回传时间：</span>
+                    <span>2017-03-06  14:29</span>
+                </li>
+                <li>
+                    <span style="color: red;">预警信息：</span>
+                    <span>该坡段淤泥深度超过警戒线标准2M,可能影响通航，请及时进行河道清淤</span>
+                </li>
+            </ul>
+            <div class="water-right">
+                <div id="waterContainer" style="width: 100%; height: 200px;"></div>
+                <span>历史水深变化趋势图</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="eightPortPop2" class="pop-water popBox">
+    <div class="pop-top">
+        <div class="angle">水质传感器JL002</div>
+        <div class="pop-close" onclick="hide('cover','eightPortPop2')"></div>
+    </div>
+    <div class="box-bg">
+        <div class="box-ct water-ct">
+            <ul class="water-left">
+                <li>
+                    <span>水深：</span>
+                    <span>4.376m</span>
+                </li>
+                <li>
+                    <span>淤泥厚度：</span>
+                    <span>2.45m</span>
+                </li>
+                <li>
+                    <span>流速：</span>
+                    <span>2.33m/s</span>
+                </li>
+                <li>
+                    <span>回传时间：</span>
+                    <span>2017-03-06  14:29</span>
+                </li>
+                <li>
+                    <span style="color: red;">预警信息：</span>
+                    <span>该坡段淤泥深度超过警戒线标准2M,可能影响通航，请及时进行河道清淤</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="eightPortPop3" class="pop-camera popBox">
+    <div class="pop-top">
+        <div class="angle">监控摄像头JL101</div>
+        <div class="pop-close" onclick="hide('cover','eightPortPop3')"></div>
+    </div>
+    <div class="box-bg">
+        <div class="camera-for-img box-ct">
+            <video src="../Lib/Video/chuanbo.mp4" muted preload loop></video>
+        </div>
+        <div class="box-ct">
+            <span style="color: red;">预警信息：</span>
+            <span>该坡段淤泥深度超过警戒线标准2M,可能影响通航，请及时进行河道清淤</span>
+        </div>
+    </div>
+</div>
+<script src="../js/public.js"></script>
+<script src="../js/eightPort.js"></script>
+<script>
+    var obj = {
+        centerPoint: {
+            point: [116.879268, 35.006848]
+        },
+        Resources: [{
+            point: [116.656201, 35.245861],
+            type: "Fire"
+        }, {
+            point: [116.740138, 35.126915],
+            type: "locIcon3"
+        }, {
+            point: [116.856236, 35.044684],
+            type: "Ambulance"
+        }, {
+            point: [116.961916, 34.934548],
+            type: "Fire"
+        }, {
+            point: [117.058293, 34.839288],
+            type: "Ambulance"
+        }, {
+            point: [117.158293, 34.752288],
+            type: "Fire"
+        }]
+    }
+    CreateMap("allmap", obj);
+    charts.init({id:915,container:"waterContainer",option:{}});
+</script>
+</body>
+</html>

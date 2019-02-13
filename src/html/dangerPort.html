@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>济宁智慧港航平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/common.min.css">
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+</head>
+<body class="dangerPort">
+<div id="wrapper">
+@@include('./include/head.html')
+@@include('./include/nav_bar.html')
+<div class="content">
+
+    <div id="map3d" class="map" style="background-color: #0F1C31;"></div>
+
+</div>
+
+</div>
+<div id="cover"></div>
+
+<div id="pop_cqg" class="pop-scout pop-scout1 popBox">
+    <div class="pop-top">
+        <div class="angle">济宁港口储气罐监控</div>
+        <div class="pop-close" onclick="hide('cover','pop_cqg')"></div>
+    </div>
+    <div class="box-bg">
+        <div class="scout-ct">
+            <ul class="tab scout-title">
+                <li class="active"><span>视频查看</span></li>
+                <li><span>危险源信息</span></li>
+            </ul>
+            <div class="tab-ct scout-tab">
+                <div class="scout-video">
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/weihuapin.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/weihuapin.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/weihuapin.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/weihuapin.mp4"  preload loop></video>
+                    </div>
+                </div>
+                <div class="din two-column">
+                    <ul>
+                        <li>
+                            <span>传感器类型：</span>
+                            <span>压力传感器</span>
+                        </li>
+                        <li>
+                            <span>当前压强：</span>
+                            <span>100兆帕</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span>监测类型：</span>
+                            <span>储气罐</span>
+                        </li>
+                        <li>
+                            <span>物质名称：</span>
+                            <span>天然气</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pop_cyg" class="pop-scout pop-scout2 popBox">
+    <div class="pop-top">
+        <div class="angle">济宁港口储油罐监控</div>
+        <div class="pop-close" onclick="hide('cover','pop_cyg')"></div>
+    </div>
+    <div class="box-bg">
+        <div class="scout-ct">
+            <ul class="tab">
+                <li class="active"><span>视频查看</span></li>
+                <li><span>危险源信息</span></li>
+            </ul>
+            <div class="tab-ct scout-tab">
+                <div class="scout-video">
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/guanqu.mp4" preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/guanqu.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/guanqu.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/guanqu.mp4"  preload loop></video>
+                    </div>
+                </div>
+                <div class="din two-column">
+                    <ul>
+                        <li>
+                            <span>传感器类型：</span>
+                            <span>压力传感器</span>
+                        </li>
+                        <li>
+                            <span>当前压强：</span>
+                            <span>100兆帕</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span>监测类型：</span>
+                            <span>储油罐</span>
+                        </li>
+                        <li>
+                            <span>物质名称：</span>
+                            <span>石油</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pop_hgc" class="pop-scout pop-scout3 popBox">
+    <div class="pop-top">
+        <div class="angle">济宁港口化工厂监控</div>
+        <div class="pop-close" onclick="hide('cover','pop_hgc')"></div>
+    </div>
+    <div class="box-bg">
+        <div class="scout-ct">
+            <ul class="tab">
+                <li class="active"><span>视频查看</span></li>
+                <li><span>危险源信息</span></li>
+            </ul>
+            <div class="tab-ct scout-tab">
+                <div class="scout-video">
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/huagongqu.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/huagongqu.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/huagongqu.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/huagongqu.mp4"  preload loop></video>
+                    </div>
+                </div>
+                <div class="din two-column">
+                    <ul>
+                        <li>
+                            <span>传感器类型：</span>
+                            <span>压力传感器</span>
+                        </li>
+                        <li>
+                            <span>当前压强：</span>
+                            <span>100兆帕</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span>监测类型：</span>
+                            <span>化工厂</span>
+                        </li>
+                        <li>
+                            <span>物质名称：</span>
+                            <span>硫酸</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pop_wxp" class="pop-scout pop-scout4 popBox">
+    <div class="pop-top">
+        <div class="angle">济宁港口危险品监控</div>
+        <div class="pop-close" onclick="hide('cover','pop_wxp')"></div>
+    </div>
+    <div class="box-bg">
+        <div class="scout-ct">
+            <ul class="tab">
+                <li class="active"><span>视频查看</span></li>
+                <li><span>危险源信息</span></li>
+            </ul>
+            <div class="tab-ct scout-tab">
+                <div class="scout-video">
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/weixianyuan.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/weixianyuan.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/weixianyuan.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/weixianyuan.mp4"  preload loop></video>
+                    </div>
+                </div>
+                <div class="din two-column">
+                    <ul>
+                        <li>
+                            <span>传感器类型：</span>
+                            <span>压力传感器</span>
+                        </li>
+                        <li>
+                            <span>当前压强：</span>
+                            <span>100兆帕</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span>监测类型：</span>
+                            <span>易燃易爆</span>
+                        </li>
+                        <li>
+                            <span>物质名称：</span>
+                            <span>火药</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pop_gd" class="pop-scout pop-scout5 popBox">
+    <div class="pop-top">
+        <div class="angle">济宁港口管道监控</div>
+        <div class="pop-close" onclick="hide('cover','pop_gd')"></div>
+    </div>
+    <div class="box-bg">
+        <div class="scout-ct">
+            <ul class="tab">
+                <li class="active"><span>视频查看</span></li>
+                <li><span>危险源信息</span></li>
+            </ul>
+            <div class="tab-ct scout-tab">
+                <div class="scout-video">
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/guandao.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/guandao.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/guandao.mp4"  preload loop></video>
+                    </div>
+                    <div class="scout-for-img">
+                        <video src="../Lib/Video/guandao.mp4"  preload loop></video>
+                    </div>
+                </div>
+                <div class="din two-column">
+                    <ul>
+                        <li>
+                            <span>传感器类型：</span>
+                            <span>压力传感器</span>
+                        </li>
+                        <li>
+                            <span>当前压强：</span>
+                            <span>100兆帕</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span>监测类型：</span>
+                            <span>管道</span>
+                        </li>
+                        <li>
+                            <span>物质名称：</span>
+                            <span>管道</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/public.js"></script>
+<script src="../js/three-rebuild.min.js"></script>
+<script src="../js/jining-harbour-app.min.js"></script>
+<script src="../js/_test.js"></script>
+<script>
+    app.changeScene(3);
+</script>
+</body>
+</html>

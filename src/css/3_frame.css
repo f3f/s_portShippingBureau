@@ -1,0 +1,360 @@
+/*frame.css 框架*/
+
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+#wrapper {
+    position:relative;
+    min-width:1900px;
+
+    background: #051E40;
+}
+
+.content {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.map {
+    width: 100%;
+    height: 100vh;
+}
+
+.map > img {
+    width: 100%;
+    height: auto;
+}
+
+/*头部样式*/
+.head-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:99;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .5), transparent);
+}
+
+.head {
+    /*width: 90%;*/
+    margin: 0 auto;
+    font-size: 0;
+    height: 80px;
+    line-height: 80px;
+    text-align:justify;
+    text-justify:distribute-all-lines;/*ie6-8*/
+    text-align-last:justify;/* ie9*/
+    -moz-text-align-last:justify;/*ff*/
+    -webkit-text-align-last:justify;/*chrome 20+*/
+}
+
+.head > div {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 1;
+    text-align: left;
+    text-align-last: left;
+    color: #fff;
+}
+
+.head > .head-right {
+    vertical-align: middle;
+    margin-right: 50px;
+}
+
+.head-left {
+    font-size: 0;
+    position: relative;
+}
+
+.head-left > h3, .head-left ul {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.head-left > h3 {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    font-size: 30px;
+    font-weight: normal;
+    transform: skewX(-30deg);
+    background: #07335F;
+    width: 350px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    text-align-last: center;
+}
+
+.head-left > h3 span {
+    display: inline-block;
+    transform: skewX(30deg);
+}
+
+.nav-top, .footer {
+    margin-top: 2px;
+    margin-left: 326px;
+    font-size: 0!important;
+}
+
+.nav-top li, .footer li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 1;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 3px;
+    box-sizing: border-box;
+    /*transition: all .3s ease-in;*/
+}
+
+.nav-top li {
+    font-size: 20px;
+}
+
+.nav-top li:nth-child(1) {
+    border-left: none;
+}
+
+.nav-top li a, .footer li a {
+    color: #fff;
+    background: #043461;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    padding: 0 20px;
+    /*text-align: center;*/
+    /*text-align-last: center;*/
+    transform: skewX(-30deg);
+    transition: all .2s ease-in;
+}
+
+.footer li a {
+    padding: 0 40px;
+}
+
+.nav-top a span, .footer a span, .footer i {
+    display: inline-block;
+    transform: skewX(30deg);
+}
+
+.nav-top a:hover, .nav-top a.active, .footer a:hover, .footer a.active {
+    border-bottom: 4px solid  #2f88d4;
+    background: #104A7F;
+    color: #48F2E6;
+}
+
+.head-right {
+    font-size: 0;
+}
+
+.head-right > div, .weather > div {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.weather-area {
+    margin-right: 10px;
+}
+
+.weather-area i {
+    font-size: 12px;
+}
+
+.weather-detail {
+    text-align: center;
+    text-align-last: center;
+    color: #fff;
+}
+
+.weather-detail div:nth-child(1) {
+    margin-bottom: 8px;
+}
+
+.search {
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    font-size: 0!important;
+    margin-right: 30px;
+    border-bottom: 1px solid  #2E86D1;
+}
+.search input, .search i {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #fff;
+}
+.search input {
+    border: none;
+    height: 70%;
+    width: calc(100% - 35px);
+    padding-left: 5px;
+    background: transparent;
+    box-sizing: border-box;
+    border-right: 1px solid  #0E4B76;
+}
+.search i {
+    height: 100%;
+    width: 35px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    text-align: center;
+    text-align-last: center;
+    cursor: pointer;
+}
+
+
+
+/*左导航样式*/
+.nav-bar-bg {
+    /*height: calc(100vh - 80px);*/
+    text-align: center;
+    width: 140px;
+    position: fixed;
+    left: 30px;
+    top: 120px;
+    z-index: 101;
+    /*background: url(../images/bg_nav.jpg) no-repeat;*/
+}
+.nav-bar, .nav-bar li {
+    width: 100%;
+}
+.nav-bar li {
+    font-size: 0;
+    margin-bottom: 3px;
+}
+.nav-bar a {
+    height: 115px;
+    line-height: 115px;
+    display: inline-block;
+    width: 100%;
+    /*height: 100%;*/
+    color: #fff;
+    font-size: 0;
+    background: rgba(4, 50, 94, .7);
+    transition: all .2s ease-in;
+}
+.nav-bar a i {
+    color: #2A7EC5;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.nav-bar div {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.nav-bar div > i, .nav-bar div > span {
+    display: block;
+}
+.nav-bar a:hover, .nav-bar a.active {
+    background: #2B7EC6;
+}
+.nav-bar a:hover i, .nav-bar a.active i {
+    color: #fff;
+}
+
+
+/*脚部样式*/
+.footer {
+    margin-left: 0;
+}
+
+.footer {
+    position: fixed;
+    bottom: 30px;
+    left: 40px;
+}
+
+.footer i {
+    display: inline-block;
+    width: 30px;
+    height: 50px;
+    box-sizing: border-box;
+    font-size: 30px;
+    margin-right: 5px;
+    color: #2A7EC5;
+}
+
+.footer i, .footer span {
+    vertical-align: middle;
+}
+
+.footer span {
+    color: #fff;
+}
+
+.footer a {
+    background: rgba(4, 50, 94, .7) !important;
+    transition: all .2s ease-in;
+}
+
+.footer a:hover, .footer a.active {
+    background: #2B7EC6!important;
+}
+.footer a:hover i, .footer a.active i, .footer a:hover span, .footer a:active span {
+    color: #fff;
+}
+
+/*预警信息页面 脚部跟随页面变化时状态改变*/
+body.prediction1 .footer a.prediction1,
+body.prediction1 .footer a.prediction1 i,
+body.prediction2 .footer a.prediction2,
+body.prediction2 .footer a.prediction2 i,
+body.prediction3 .footer a.prediction3,
+body.prediction3 .footer a.prediction3 i,
+body.eightPort1 .footer a.eightPort1,
+body.eightPort1 .footer a.eightPort1 i,
+body.eightPort2 .footer a.eightPort2,
+body.eightPort2 .footer a.eightPort2 i,
+body.eightPort3 .footer a.eightPort3,
+body.eightPort3 .footer a.eightPort3 i{
+    background: #2B7EC6!important;
+    color: #fff;
+}
+
+/* 左导航 */
+body.index .nav-bar a.index,
+body.index .nav-bar a.index i,
+body.dangerGoods .nav-bar a.dangerGoods,
+body.dangerGoods .nav-bar a.dangerGoods i,
+body.shippingMonit .nav-bar a.shippingMonit,
+body.shippingMonit .nav-bar a.shippingMonit i,
+body.emergenceMeasure .nav-bar a.emergenceMeasure,
+body.emergenceMeasure .nav-bar a.emergenceMeasure i,
+body.prediction1 .nav-bar a.prediction1,
+body.prediction1 .nav-bar a.prediction1 i,
+body.prediction2 .nav-bar a.prediction1,
+body.prediction2 .nav-bar a.prediction1 i,
+body.prediction3 .nav-bar a.prediction1,
+body.prediction3 .nav-bar a.prediction1 i,
+body.eightPort1 .nav-bar a.index,
+body.eightPort1 .nav-bar a.index i,
+body.eightPort2 .nav-bar a.index,
+body.eightPort2 .nav-bar a.index i,
+body.eightPort3 .nav-bar a.index,
+body.eightPort3 .nav-bar a.index i,
+body.dangerPort .nav-bar a.dangerPort,
+body.dangerPort .nav-bar a.dangerPort i{
+    background: #2B7EC6;
+    color: #fff;
+}
+
+
+
+/*frame.css 框架*/

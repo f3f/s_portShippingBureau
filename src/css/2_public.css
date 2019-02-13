@@ -1,0 +1,154 @@
+/*公共文件，包括一些按钮等共用样式，放在此处*/
+
+/*两个折角的样式*/
+.angle {
+    position: relative;
+    display: inline-block;
+    width: 35%;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    padding-left: 30px;
+    background: linear-gradient(135deg, transparent 10px, #2B7EC7 0) no-repeat;
+    background-size: 100% 100%;
+    font-size: 16px;
+}
+.angle:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -20%;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(-135deg, transparent 50%, #2B7EC7 0) no-repeat;
+}
+.angle:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 246%;
+    height: 3px;
+    background: #2B7EC7;
+}
+
+/*重度污染*/
+.pollute-severe {
+    color: #ec411f;
+}
+
+.pollute-mild {
+    color: #e7d70d;
+}
+
+.pollute-none {
+    color: #0f91ff;
+}
+
+/*右侧三个盒子高度*/
+.ct-right {
+    position: absolute;
+    top: 130px;
+    right: 30px;
+    height: 800px;
+}
+
+.box {
+    width: 540px;
+}
+li.box:first-child:nth-last-child(1) {
+    height: 100%;
+}
+li.box:first-child:nth-last-child(2),
+li.box:first-child:nth-last-child(2) ~ li.box{
+    height: 50%;
+}
+
+li.box:first-child:nth-last-child(3),
+li.box:first-child:nth-last-child(3) ~ li.box{
+    height: 33.33%;
+}
+
+.box-bg {
+    height: 84%;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    background:  rgba(255, 255, 255, .1);
+}
+
+.box-ct {
+    background:#07253a;
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+}
+
+/*弹窗样式*/
+.pop-close {
+    display: inline-block;
+    width: 62px;
+    height: 35px;
+    line-height: 35px;
+    float: right;
+    background: url(../images/btn_close.png) no-repeat;
+    cursor:pointer;
+    /*transition: all .2s ease-in;*/
+}
+.pop-close:hover {
+    background-position: 0 -45px;
+}
+
+
+/**地图切换样式**/
+.bMapTypeControl{position: absolute;top:80px;right:40px;z-index: 10;height:17px;padding:14px 0;background:#2b7ec7;line-height:17px;}
+.bMapTypeControl li{float:left;color:#fff;font-size:14px;padding:0 10px 0 20px;border-right:1px dashed #fff;cursor:pointer;}
+.bMapTypeControl li:last-child{border-right:none;}
+.bMapTypeControl li i{font-size:14px;padding-right:10px;}
+.bMapTypeControl li.hover i{color:#4effe8;}
+.bMapTypeControlCj{width:225px;padding:10px 10px 10px 15px;background:#07253a;position:absolute;right:0;top:55px;box-shadow:0 0 5px 0 #000;display:none;}
+.bMapTypeControlCj_tit{overflow:hidden;padding:10px 0;}
+.bMapTypeControlCj_tit p{float:left;line-height:18px;color:#4effe8;font-size:14px;}
+.bMapTypeControlCj_tit span{float:right;width:18px;height:18px;line-height:18px;color:#07253a;background:#4effe8;font-size:12px;border-radius:9px;text-align:center;cursor: pointer;font-weight:bold;}
+.bMapTypeControlCj_cont{line-height:24px;margin-top:10px;}
+
+/**tab切换样式**/
+.easyTab{position: absolute;top:15px;right:10px;overflow:hidden;z-index:1;}
+.easyTab li{float:left;text-align:center;border-right:1px solid #194469;padding:0 12px;}
+.easyTab li span{line-height:26px;border-bottom:2px solid transparent;padding:0 10px;display: inline-block;cursor:pointer;}
+.easyTab li.hover span{border-bottom:2px solid #5791db;}
+.easyTab li:last-child{border-bottom:none;}
+
+/**地图搜索功能**/
+.bMapSearch{position: absolute;top:120px;left:240px;height:36px;line-height:36px;color:#fff;}
+.bMapSearch dt{float:left;}
+.bMapSearch dd{float:left;margin-left:10px;background:rgba(8,53,96,.9);}
+.bMapSearch dd .search{margin-right:0;width:340px;}
+.bMapSearchRadio{float:left;margin-right:26px;}
+.bMapSearchRadio dt{cursor: pointer;}
+.bMapSearchRadio dt i{margin-right:8px;color:#2f7dbe;float:left;}
+.bMapSearchRadio dt span{float:left;}
+.bMapSearchRadio dt i.icon-danxuankuang{display:none;color:#1ebc7c;}
+.bMapSearchRadio dd{display: none;}
+.bMapSearchRadio.active dt i.icon-radio{display: none;}
+.bMapSearchRadio.active dt i.icon-danxuankuang{display: block;}
+.bMapSearchRadio.active dd{display:block;}
+
+/**弹出层**/
+#cover{position:absolute;top:0;left:0;z-index:100;visibility:hidden;background:#000;opacity:0.5;filter:alpha(opacity=50);}
+.popBox{position:absolute;top:0;left:0;z-index:200;visibility:hidden;}
+.czgjCont{width:100%;}
+.czgjCont th,.czgjCont td{color:#fff;padding:10px 5px;text-align: center;}
+.czgjCont th{background:#2877bb;}
+.czgjCont tr:nth-child(odd) td{background: #0E2537;}
+.czgjCont tr:nth-child(even) td{background: #043461;}
+
+/**动画效果**/
+@keyframes yyks
+{
+    0% {box-shadow:0 0 0 0 #4effe8;border-radius: 40px;}
+    100% {box-shadow: 0 0 40px 0 #4effe8;border-radius: 40px;}
+}
+.animationHx{animation: yyks .5s linear infinite alternate;}

@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>济宁智慧港航平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/common.min.css">
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+</head>
+<body class="shippingMonit">
+<div id="wrapper">
+@@include('./include/head.html')
+@@include('./include/nav_bar.html')
+<div class="content">
+
+    <div id="bMap" class="map"></div>
+
+    <div class="bMapSearch">
+
+        <dl class="bMapSearchRadio active">
+            <dt><i class="iconfont icon-radio"></i><i class="iconfont icon-danxuankuang"></i><span>船名</span></dt>
+            <dd>
+                <div class="search">
+                    <input type="text" placeholder="请输入船名，呼号，IOM或者MMIS" name="">
+                    <i class="iconfont icon-sousuo_sousuo"></i>
+                </div>
+            </dd>
+        </dl>
+
+        <dl class="bMapSearchRadio">
+            <dt><i class="iconfont icon-radio"></i><i class="iconfont icon-danxuankuang"></i><span>港口</span></dt>
+            <dd>
+                <div class="search">
+                    <input type="text" placeholder="请输入港口名" name="">
+                    <i class="iconfont icon-sousuo_sousuo"></i>
+                </div>
+            </dd>
+        </dl>
+    </div>
+
+</div>
+</div>
+
+<div id="cover"></div>
+<div id="pop_gkjk" class="pop-port popBox">
+    <div class="pop-top">
+        <div class="angle">港口监控信息</div>
+        <div class="pop-close" onclick="hide('cover','pop_gkjk')"></div>
+    </div>
+    <div class="port-ct">
+        <ul class="tab">
+            <li class="active"><span>在港船舶</span></li>
+            <li><span>离港船舶</span></li>
+            <li><span>到达船舶</span></li>
+            <li><span>预抵船舶</span></li>
+        </ul>
+        <div class="search-fun">
+            <input type="text" placeholder="船名" name="">
+            <input type="text" placeholder="呼号" name="">
+            <input type="text" placeholder="船舶类型" name="">
+        </div>
+        <div class="tab-ct">
+            <table class="czgjCont">
+                <tr>
+                    <th>NO.</th>
+                    <th>船名</th>
+                    <th>呼号</th>
+                    <th>船舶类型</th>
+                    <th>到港时间</th>
+                    <th>造船日期</th>
+                    <th>船长（米）</th>
+                    <th>船宽（米）</th>
+                    <th>载重吨</th>
+                    <th>速度（节）</th>
+                    <th>当前位置</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>0</td>
+                    <td>120.31/36.08</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>BULK TITAN</td>
+                    <td>3FGP3</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>2017-01-01</td>
+                    <td>189</td>
+                    <td>32</td>
+                    <td>58090</td>
+                    <td>0</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>0</td>
+                    <td>120.31/36.08</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>BULK TITAN</td>
+                    <td>3FGP3</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>2017-01-01</td>
+                    <td>189</td>
+                    <td>32</td>
+                    <td>58090</td>
+                    <td>0</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>0</td>
+                    <td>120.31/36.08</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>BULK TITAN</td>
+                    <td>3FGP3</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>2017-01-01</td>
+                    <td>189</td>
+                    <td>32</td>
+                    <td>58090</td>
+                    <td>0</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>0</td>
+                    <td>120.31/36.08</td>
+                </tr>
+            </table>
+            <table class="czgjCont din">
+                <tr>
+                    <th>NO.</th>
+                    <th>船名</th>
+                    <th>呼号</th>
+                    <th>船舶类型</th>
+                    <th>到港时间</th>
+                    <th>造船日期</th>
+                    <th>船长（米）</th>
+                    <th>船宽（米）</th>
+                    <th>载重吨</th>
+                    <th>速度（节）</th>
+                    <th>当前位置</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>KAI HANG 3</td>
+                    <td>-</td>
+                    <td>其他</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>141</td>
+                    <td>19</td>
+                    <td>4787</td>
+                    <td>0</td>
+                    <td>120.32/36.11</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>QING YOU 9</td>
+                    <td>BTCG</td>
+                    <td>游轮</td>
+                    <td>02-26 16:00:00</td>
+                    <td>1988-09-01</td>
+                    <td>87</td>
+                    <td>12</td>
+                    <td>2519</td>
+                    <td>0</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>0.3</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>0</td>
+                    <td>120.31/36.08</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>BULK TITAN</td>
+                    <td>3FGP3</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>2017-01-01</td>
+                    <td>189</td>
+                    <td>32</td>
+                    <td>58090</td>
+                    <td>0</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>0.3</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>0</td>
+                    <td>120.31/36.08</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>BULK TITAN</td>
+                    <td>3FGP3</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>2017-01-01</td>
+                    <td>189</td>
+                    <td>32</td>
+                    <td>58090</td>
+                    <td>0</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>0.3</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>0</td>
+                    <td>120.31/36.08</td>
+                </tr>
+            </table>
+            <table class="czgjCont din">
+                <tr>
+                    <th>NO.</th>
+                    <th>船名</th>
+                    <th>呼号</th>
+                    <th>船舶类型</th>
+                    <th>到港时间</th>
+                    <th>造船日期</th>
+                    <th>船长（米）</th>
+                    <th>船宽（米）</th>
+                    <th>载重吨</th>
+                    <th>速度（节）</th>
+                    <th>当前位置</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>ANHE</td>
+                    <td>BTCV</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>17</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>120.31/36.09</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>BULK TITAN</td>
+                    <td>3FGP3</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>2017-01-01</td>
+                    <td>189</td>
+                    <td>32</td>
+                    <td>58090</td>
+                    <td>0</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>0.3</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>0</td>
+                    <td>120.31/36.08</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>BULK TITAN</td>
+                    <td>3FGP3</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>2017-01-01</td>
+                    <td>189</td>
+                    <td>32</td>
+                    <td>58090</td>
+                    <td>0</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>0.3</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>0</td>
+                    <td>120.31/36.08</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>BULK TITAN</td>
+                    <td>3FGP3</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>2017-01-01</td>
+                    <td>189</td>
+                    <td>32</td>
+                    <td>58090</td>
+                    <td>0</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>0.3</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>0</td>
+                    <td>120.31/36.08</td>
+                </tr>
+            </table>
+            <table class="czgjCont din">
+                <tr>
+                    <th>NO.</th>
+                    <th>船名</th>
+                    <th>呼号</th>
+                    <th>船舶类型</th>
+                    <th>到港时间</th>
+                    <th>造船日期</th>
+                    <th>船长（米）</th>
+                    <th>船宽（米）</th>
+                    <th>载重吨</th>
+                    <th>速度（节）</th>
+                    <th>当前位置</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>JUBILANT</td>
+                    <td>3EWZ4</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>292</td>
+                    <td>45</td>
+                    <td>-</td>
+                    <td>10.8</td>
+                    <td>120.31/36.08</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>BULK TITAN</td>
+                    <td>3FGP3</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>2017-01-01</td>
+                    <td>189</td>
+                    <td>32</td>
+                    <td>58090</td>
+                    <td>13.8</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>10.10</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>9.9</td>
+                    <td>120.31/36.08</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>BULK TITAN</td>
+                    <td>3FGP3</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>2017-01-01</td>
+                    <td>189</td>
+                    <td>32</td>
+                    <td>58090</td>
+                    <td>0</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>10.9</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>10.00</td>
+                    <td>120.31/36.08</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>BULK TITAN</td>
+                    <td>3FGP3</td>
+                    <td>货船</td>
+                    <td>02-26 16:00:00</td>
+                    <td>2017-01-01</td>
+                    <td>189</td>
+                    <td>32</td>
+                    <td>58090</td>
+                    <td>12.4</td>
+                    <td>120.32/36.1</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>GUI BIN</td>
+                    <td>-</td>
+                    <td>引航</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>-</td>
+                    <td>10.2</td>
+                    <td>120.32/36.09</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>HJ37036</td>
+                    <td>SB37036</td>
+                    <td>执法</td>
+                    <td>02-26 16:00:00</td>
+                    <td>-</td>
+                    <td>41</td>
+                    <td>6</td>
+                    <td>177</td>
+                    <td>12.2</td>
+                    <td>120.31/36.08</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="pop_czxx" class="pop-sail popBox">
+    <div class="pop-top">
+        <div class="angle">鲁A9013船只信息</div>
+        <div class="pop-close" onclick="hide('cover','pop_czxx');"></div>
+    </div>
+    <div class="sail-ct">
+        <div class="sail-left">
+            <h3 class="sail-title">历史轨迹</h3>
+            <div class="sail-track"><div id="bMapPop" class="box-ct"></div></div>
+        </div>
+        <div class="sail-right">
+            <ul class="sail-title tab">
+                <li class="active"><span>船舶信息</span></li>
+                <li><span>船员信息</span></li>
+                <li><span>视频查看</span></li>
+                <li><span>预警信息</span></li>
+            </ul>
+            <div class="sail-tab tab-ct">
+                <!-- 船舶信息 -->
+                <div class="sail-info two-column posR">
+                    <a href="javascript:void(0);" class="sail-info-view" onclick="hide('cover','pop_czxx');show('cover','pop_cbxx')">船舶详情>></a>
+                    <ul>
+                        <li>
+                            <span>MMSI：</span>
+                            <span>412231723</span>
+                        </li>
+                        <li>
+                            <span>IMO：</span>
+                            <span>0</span>
+                        </li>
+                        <li>
+                            <span>经度：</span>
+                            <span>E 117度51.8830分</span>
+                        </li>
+                        <li>
+                            <span>船东：</span>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>船舶类型：</span>
+                            <span>货船</span>
+                        </li>
+                        <li>
+                            <span>状态／航速：</span>
+                            <span>捕捞／0.20节</span>
+                        </li>
+                        <li>
+                            <span>目的地：</span>
+                            <span>NEW ORK</span>
+                        </li>
+                        <li>
+                            <span>吃水：</span>
+                            <span>20.00/米</span>
+                        </li>
+                        <li>
+                            <span>总吨：</span>
+                            <span>吨</span>
+                        </li>
+                        <li>
+                            <span>净吨：</span>
+                            <span>吨</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span>中文船名：</span>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>呼号：</span>
+                            <span>0</span>
+                        </li>
+                        <li>
+                            <span>纬度：</span>
+                            <span>N24度25.9480分</span>
+                        </li>
+                        <li>
+                            <span>国籍：</span>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>船首向／航迹象：</span>
+                            <span>31度／282.2度</span>
+                        </li>
+                        <li>
+                            <span>船长／船宽：</span>
+                            <span>1113米／22米</span>
+                        </li>
+                        <li>
+                            <span>预到日期：</span>
+                            <span>12-10 12:00</span>
+                        </li>
+                        <li>
+                            <span>最后时间：</span>
+                            <span>06-21 16：03:09</span>
+                        </li>
+                        <li>
+                            <span>栽重：</span>
+                            <span>吨</span>
+                        </li>
+                        <li>
+                            <span>建造时间：</span>
+                            <span></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 船员信息 -->
+                <table class="sailor-info din">
+                    <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>身份证号</th>
+                        <th>国籍</th>
+                        <th>职务</th>
+                        <th>查看</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>13455244434662</td>
+                        <td>USA</td>
+                        <td>船长</td>
+                        <td><i class="iconfont icon-sousuo_sousuo" onclick="hide('cover','pop_czxx');show('cover','pop_cyxx')"></i></td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>13455244434662</td>
+                        <td>USA</td>
+                        <td>船长</td>
+                        <td><i class="iconfont icon-sousuo_sousuo" onclick="hide('cover','pop_czxx');show('cover','pop_cyxx')"></i></td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>13455244434662</td>
+                        <td>USA</td>
+                        <td>船长</td>
+                        <td><i class="iconfont icon-sousuo_sousuo" onclick="hide('cover','pop_czxx');show('cover','pop_cyxx')"></i></td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>13455244434662</td>
+                        <td>USA</td>
+                        <td>船长</td>
+                        <td><i class="iconfont icon-sousuo_sousuo" onclick="hide('cover','pop_czxx');show('cover','pop_cyxx')"></i></td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>13455244434662</td>
+                        <td>USA</td>
+                        <td>船长</td>
+                        <td><i class="iconfont icon-sousuo_sousuo" onclick="hide('cover','pop_czxx');show('cover','pop_cyxx')"></i></td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>13455244434662</td>
+                        <td>USA</td>
+                        <td>船长</td>
+                        <td><i class="iconfont icon-sousuo_sousuo" onclick="hide('cover','pop_czxx');show('cover','pop_cyxx')"></i></td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>13455244434662</td>
+                        <td>USA</td>
+                        <td>船长 </td>
+                        <td><i class="iconfont icon-sousuo_sousuo" onclick="hide('cover','pop_czxx');show('cover','pop_cyxx')"></i></td>
+                    </tr>
+                    <tr>
+                        <td>张三</td>
+                        <td>男</td>
+                        <td>13455244434662</td>
+                        <td>USA</td>
+                        <td>船长</td>
+                        <td><i class="iconfont icon-sousuo_sousuo" onclick="hide('cover','pop_czxx');show('cover','pop_cyxx')"></i></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- 视频查看 -->
+                <div class="exame-video din">
+                    <div class="video-for-img">
+                        <video muted preload loop src="../images/boat_camera.mp4" poster="../images/exame_video1.jpg"></video>
+                    </div>
+                    <div class="video-for-img">
+                        <video muted preload loop src="../images/boat_camera.mp4" poster="../images/exame_video2.jpg"></video>
+                    </div>
+                    <div class="video-for-img">
+                        <video muted preload loop src="../images/boat_camera.mp4" poster="../images/exame_video3.jpg"></video>
+                    </div>
+                </div>
+                <!-- 预警信息 -->
+                <ul class="predict-info din">
+                    <li>
+                        <div><i class="iconfont icon-laba"></i></div>
+                        <div>
+                            <span>2017-1-10</span>
+                            <span>济宁至江苏行程之中，坐标（xxxxx，xxxx），因台风 原因偏离航道。</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="iconfont icon-laba"></i></div>
+                        <div>
+                            <span>2017-1-10</span>
+                            <span>济宁至江苏行程之中，坐标（xxxxx，xxxx），因台风 原因偏离航道。</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="iconfont icon-laba"></i></div>
+                        <div>
+                            <span>2017-1-10</span>
+                            <span>济宁至江苏行程之中，坐标（xxxxx，xxxx），因台风 原因偏离航道。</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="iconfont icon-laba"></i></div>
+                        <div>
+                            <span>2017-1-10</span>
+                            <span>济宁至江苏行程之中，坐标（xxxxx，xxxx），因台风 原因偏离航道。</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="iconfont icon-laba"></i></div>
+                        <div>
+                            <span>2017-1-10</span>
+                            <span>济宁至江苏行程之中，坐标（xxxxx，xxxx），因台风 原因偏离航道。</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="iconfont icon-laba"></i></div>
+                        <div>
+                            <span>2017-1-10</span>
+                            <span>济宁至江苏行程之中，坐标（xxxxx，xxxx），因台风 原因偏离航道。</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="iconfont icon-laba"></i></div>
+                        <div>
+                            <span>2017-1-10</span>
+                            <span>济宁至江苏行程之中，坐标（xxxxx，xxxx），因台风 原因偏离航道。</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="iconfont icon-laba"></i></div>
+                        <div>
+                            <span>2017-1-10</span>
+                            <span>济宁至江苏行程之中，坐标（xxxxx，xxxx），因台风 原因偏离航道。</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pop_czgj" class="pop-water box popBox">
+    <div class="pop-top">
+        <div class="angle">历史轨迹</div>
+        <div class="pop-close" onclick="hide('cover','pop_czgj');show('cover','pop_czxx');"></div>
+    </div>
+    <div class="box-bg">
+        <div class="industry-table box-ct">
+            <table class="czgjCont">
+                <tr>
+                    <th>动态</th>
+                    <th>停泊地点</th>
+                    <th>申请人</th>
+                    <th>出港时间</th>
+                    <th>卸载货物</th>
+                </tr>
+                <tr>
+                    <td>出港签证申请</td>
+                    <td>徽山</td>
+                    <td>袁德斌</td>
+                    <td>2016-06-17至2016-06-21  16:00</td>
+                    <td>煤炭</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="pop_cbxx" class="pop-boat popBox">
+    <div class="pop-top">
+        <div class="angle">船舶详情</div>
+        <div class="pop-close" onclick="hide('cover','pop_cbxx');show('cover','pop_czxx')"></div>
+    </div>
+    <div class="boat-ct">
+        <div class="boat-left">
+            <div class="boat-for-img">
+                <img src="../images/boat_info.jpg">
+            </div>
+            <span>AS0001</span>
+        </div>
+        <div class="boat-right">
+            <table class="boat-table">
+                <thead>
+                <tr>
+                    <th colspan="3">船舶基本信息</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span>船舶登记号：</span><span>AS001</span></td>
+                    <td><span>中文船名：</span><span>祁门</span></td>
+                    <td><span>英文船名：</span><span>QIMEN</span></td>
+                </tr>
+                <tr>
+                    <td><span>船舶呼号：</span><span>BIBQ2</span></td>
+                    <td><span>IMO编号：</span><span>9532044</span></td>
+                    <td><span>船舶种类：</span><span>货船</span></td>
+                </tr>
+                <tr>
+                    <td><span>MMSI：</span><span>235064475</span></td>
+                    <td><span>235064475：</span><span>中国</span></td>
+                    <td><span>船籍港：</span><span>上海</span></td>
+                </tr>
+                <tr>
+                    <td><span>船速：</span><span>15kts</span></td>
+                    <td><span>建造厂：</span><span>山东</span></td>
+                    <td><span>造船地点：</span><span>山东</span></td>
+                </tr>
+                <tr>
+                    <td><span>造船时间：</span><span>2015－10－10</span></td>
+                    <td><span>安放龙骨日期：</span><span>2015－10－12</span></td>
+                    <td><span>下水日期：</span><span>2015－10－10</span></td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="boat-table">
+                <thead>
+                <tr>
+                    <th colspan="3">船体信息</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span>船舱数：</span><span>10个</span></td>
+                    <td><span>甲板数：</span><span>5个</span></td>
+                    <td><span>总长：</span><span>120m</span></td>
+                </tr>
+                <tr>
+                    <td><span>型宽：</span><span>10m</span></td>
+                    <td><span>型深：</span><span>12m</span></td>
+                    <td><span>吃水：</span><span>6m</span></td>
+                </tr>
+                <tr>
+                    <td><span>排水量：</span><span>XXX</span></td>
+                    <td><span>冷藏舱数：</span><span>XXX</span></td>
+                    <td><span>冷藏总容积：</span><span>XXX</span></td>
+                </tr>
+                <tr>
+                    <td><span>货舱数：</span><span>XXX</span></td>
+                    <td><span>货舱总容积：</span><span>XXX</span></td>
+                    <td><span></span><span></span></td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="boat-table">
+                <thead>
+                <tr>
+                    <th colspan="3">主机吨位</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span>主机制造商：</span><span>XXX</span></td>
+                    <td><span>主机种类：</span><span>XXX</span></td>
+                    <td><span>主机燃料：</span><span>XXX</span></td>
+                </tr>
+                <tr>
+                    <td><span>主机型号：</span><span>XXX</span></td>
+                    <td><span>主机速率：</span><span>XXX</span></td>
+                    <td><span>主机性能：</span><span>XXX</span></td>
+                </tr>
+                <tr>
+                    <td><span>排水量：：</span><span>XXX</span></td>
+                    <td><span>冷藏舱数：：</span><span>XXX</span></td>
+                    <td><span>冷藏总容积：：</span><span>XXX</span></td>
+                </tr>
+                <tr>
+                    <td><span>主机建造地点：</span><span>XXX</span></td>
+                    <td><span>主机建造时间：</span><span>XXX</span></td>
+                    <td><span>主机总功率：</span><span>XXX</span></td>
+                </tr>
+                <tr>
+                    <td><span>总吨位：</span><span>10T</span></td>
+                    <td><span>载重吨：</span><span>7T</span></td>
+                    <td><span>静吨位：</span><span>8T</span></td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="boat-table">
+                <thead>
+                <tr>
+                    <th colspan="3">船舶所有人</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span>船舶所有人：</span><span>XXX</span></td>
+                    <td><span>联系人：</span><span>XXX</span></td>
+                    <td><span>电话：</span><span>XXX</span></td>
+                </tr>
+                <tr>
+                    <td><span>邮箱：</span><span>XXX</span></td>
+                    <td><span>传真：</span><span>XXX</span></td>
+                    <td><span>地址：</span><span>XXX</span></td>
+                </tr>
+                <tr>
+                    <td><span>船舶经营人：</span><span>XXX</span></td>
+                    <td><span></span><span></span></td>
+                    <td><span></span><span></span></td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="boat-table boat-special">
+                <thead>
+                <tr>
+                    <th colspan="4">船检信息</th>
+                </tr>
+                <tr>
+                    <th>检验时间</th>
+                    <th>检验地点</th>
+                    <th>检验人</th>
+                    <th>检验种类</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2007-12-10</td>
+                    <td>济宁</td>
+                    <td>船舶检验局</td>
+                    <td>初次检验</td>
+                </tr>
+                <tr>
+                    <td>2017-12-10</td>
+                    <td>大连</td>
+                    <td>船舶检验局</td>
+                    <td>年度检验</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- 船员信息 -->
+<div id="pop_cyxx" class="pop-boat popBox">
+    <div class="pop-top">
+        <div class="angle">船员详情</div>
+        <div class="pop-close" onclick="hide('cover','pop_cyxx');show('cover','pop_czxx')"></div>
+    </div>
+    <div class="boat-ct">
+        <div class="boat-left">
+            <div class="boat-for-img">
+                <img src="../images/boat_sailor.jpg">
+            </div>
+            <span>宋仲基(大副)</span>
+        </div>
+        <div class="boat-right">
+            <table class="boat-table">
+                <thead>
+                <tr>
+                    <th colspan="3">基本信息</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span>姓名：</span><span>宋仲基</span></td>
+                    <td><span>身份证号：</span><span>110223198012122300</span></td>
+                    <td><span>现任职务：</span><span>大幅</span></td>
+                </tr>
+                <tr>
+                    <td><span>性别：</span><span>男</span></td>
+                    <td><span>民族：</span><span>汉</span></td>
+                    <td><span>国籍：</span><span>中国</span></td>
+                </tr>
+                <tr>
+                    <td><span>身高：</span><span>180cm</span></td>
+                    <td><span>体重：</span><span>63Kg</span></td>
+                    <td><span>血型：</span><span>O型</span></td>
+                </tr>
+                <tr>
+                    <td><span>出生日期：</span><span>1980-12-12</span></td>
+                    <td><span>出生地点：</span><span>XXXXXX</span></td>
+                    <td><span>婚姻状况：</span><span>已婚</span></td>
+                </tr>
+                <tr>
+                    <td><span>联系方式：</span><span>18912312300</span></td>
+                    <td><span>电子邮箱：</span><span>cyc@msa.gov.cn</span></td>
+                    <td><span>邮政编码：</span><span>22323</span></td>
+                </tr>
+                <tr>
+                    <td><span>应急联系人：</span><span>张大鹏</span></td>
+                    <td><span>应急联系人方式：</span><span>18514236888</span></td>
+                    <td><span>工作鞋号：</span><span>XXX</span></td>
+                </tr>
+                <tr>
+                    <td><span>家庭现住址：</span><span>XXXXX</span></td>
+                    <td><span>户籍地址：</span><span>XXXXX</span></td>
+                    <td><span>健康状况：</span><span>良好</span></td>
+                </tr>
+                <tr>
+                    <td><span>慢性病史：</span><span>XXXXX</span></td>
+                    <td><span>其它病史：</span><span>XXXXX</span></td>
+                    <td><span></span><span></span></td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="boat-table">
+                <thead>
+                <tr>
+                    <th colspan="3">教育信息</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span>教育类别：</span><span>航海类</span></td>
+                    <td><span>毕业院校：</span><span>XX学校</span></td>
+                    <td><span>毕业时间：</span><span>XXXXX</span></td>
+                </tr>
+                <tr>
+                    <td><span>专业：</span><span>驾驶</span></td>
+                    <td><span>学历：</span><span>大专</span></td>
+                    <td><span>学位：</span><span>XXXX</span></td>
+                </tr>
+                <tr>
+                    <td><span>毕业证书号：</span><span>XXXXXX</span></td>
+                    <td><span></span><span></span></td>
+                    <td><span></span><span></span></td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="boat-table boat-special">
+                <thead>
+                <tr>
+                    <th colspan="5">证书信息</th>
+                </tr>
+                <tr>
+                    <th>证书名称</th>
+                    <th>编号</th>
+                    <th>发证时间</th>
+                    <th>到期时间</th>
+                    <th>签发机关</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>服务薄</td>
+                    <td>0901100637</td>
+                    <td>2007-04-05</td>
+                    <td>2017-04-05</td>
+                    <td>0901100637</td>
+                </tr>
+                <tr>
+                    <td>适任证书</td>
+                    <td>0901100637</td>
+                    <td>2007-04-05</td>
+                    <td>2017-04-05</td>
+                    <td>0901100637</td>
+                </tr>
+                <tr>
+                    <td>海员证</td>
+                    <td>0901100637</td>
+                    <td>2007-04-05</td>
+                    <td>2017-04-05</td>
+                    <td>0901100637</td>
+                </tr>
+                <tr>
+                    <td>高级消防培训</td>
+                    <td>0901100637</td>
+                    <td>2007-04-05</td>
+                    <td>2017-04-05</td>
+                    <td>0901100637</td>
+                </tr>
+                <tr>
+                    <td>精通急救</td>
+                    <td>0901100637</td>
+                    <td>2007-04-05</td>
+                    <td>2017-04-05</td>
+                    <td>0901100637</td>
+                </tr>
+                <tr>
+                    <td>船上医护</td>
+                    <td>0901100637</td>
+                    <td>2007-04-05</td>
+                    <td>2017-04-05</td>
+                    <td>0901100637</td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="boat-table">
+                <thead>
+                <tr>
+                    <th colspan="2">指纹信息</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span>左食指：</span><span>已录</span></td>
+                    <td><span>右食指：</span><span>已录</span></td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="boat-table boat-special">
+                <thead>
+                <tr>
+                    <th colspan="7">海上工作经历</th>
+                </tr>
+                <tr>
+                    <th>船名</th>
+                    <th>船舶类型/总吨</th>
+                    <th>主机型号/马力</th>
+                    <th>职务</th>
+                    <th>上下船时间</th>
+                    <th>公司名称</th>
+                    <th>航线</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>北航10</td>
+                    <td>散 6070</td>
+                    <td>柴 3950</td>
+                    <td>船长</td>
+                    <td>柴 3950</td>
+                    <td>济宁金帆公司</td>
+                    <td>南北</td>
+                </tr>
+                <tr>
+                    <td>北航10</td>
+                    <td>散 6070</td>
+                    <td>柴 3950</td>
+                    <td>船长</td>
+                    <td>柴 3950</td>
+                    <td>济宁金帆公司</td>
+                    <td>南北</td>
+                </tr>
+                <tr>
+                    <td>北航10</td>
+                    <td>散 6070</td>
+                    <td>柴 3950</td>
+                    <td>船长</td>
+                    <td>柴 3950</td>
+                    <td>济宁金帆公司</td>
+                    <td>南北</td>
+                </tr>
+                <tr>
+                    <td>北航10</td>
+                    <td>散 6070</td>
+                    <td>柴 3950</td>
+                    <td>船长</td>
+                    <td>柴 3950</td>
+                    <td>济宁金帆公司</td>
+                    <td>南北</td>
+                </tr>
+                <tr>
+                    <td>北航10</td>
+                    <td>散 6070</td>
+                    <td>柴 3950</td>
+                    <td>船长</td>
+                    <td>柴 3950</td>
+                    <td>济宁金帆公司</td>
+                    <td>南北</td>
+                </tr>
+                <tr>
+                    <td>北航10</td>
+                    <td>散 6070</td>
+                    <td>柴 3950</td>
+                    <td>船长</td>
+                    <td>柴 3950</td>
+                    <td>济宁金帆公司</td>
+                    <td>南北</td>
+                </tr>
+                <tr>
+                    <td>北航10</td>
+                    <td>散 6070</td>
+                    <td>柴 3950</td>
+                    <td>船长</td>
+                    <td>柴 3950</td>
+                    <td>济宁金帆公司</td>
+                    <td>南北</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CP5vabjbBI1GI6S5vwQTWqxjgT1zsiFQ"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/CurveLine/1.5/src/CurveLine.min.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/shippingMonit.js"></script>
+</body>
+</html>

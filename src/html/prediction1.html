@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>济宁智慧港航平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/common.min.css">
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/echarts-all-3.js"></script>
+    <script src="../Lib/echarts-engine.js"></script>
+</head>
+<body class="prediction1">
+<div id="wrapper">
+@@include('./include/head.html')
+@@include('./include/nav_bar.html')
+<div class="content">
+
+<div class="map">
+    <img src="../images/prediction1.jpg">
+</div>
+
+<ul class="ct-right">
+    <li class="box">
+        <div class="angle">水务走私实时预警</div>
+        <div class="box-bg">
+            <div class="box-ct prediction">
+                <ul>
+                    <li>
+                        <div class="pre-icon">
+                            <i class="iconfont icon-jingzhi"></i>
+                        </div>
+                        <div>
+                            <div class="time">2017-1-10 10:10</div>
+                            <p>在微山港鲁运6A01船舶走私钢铁</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pre-icon">
+                            <i class="iconfont icon-jingzhi"></i>
+                        </div>
+                        <div>
+                            <div class="time">2017-1-10 10:10</div>
+                            <p>在微山港鲁运6F320船舶走钢铁</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="more">
+                    <span>更多</span>
+                    <i class="iconfont icon-jiantou"></i>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="box">
+        <div class="angle">水务走私事件趋势及预测</div>
+        <div class="box-bg posR">
+            <ul class="easyTab">
+                <li class="hover"><span>日预测</span></li>
+                <li><span>周预测</span></li>
+                <li><span>月预测</span></li>
+            </ul>
+            <div id="chart_swyc" class="box-ct"></div>
+        </div>
+    </li>
+    <li class="box">
+        <div class="angle">水务走私案件类型</div>
+        <div class="box-bg">
+            <div id="chart_swzs" class="box-ct"></div>
+        </div>
+    </li>
+</ul>
+
+</div>
+@@include('./include/prediction_foot.html')
+</div>
+<script src="../js/prediction.js"></script>
+</body>
+</html>

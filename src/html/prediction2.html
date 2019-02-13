@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>济宁智慧港航平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/common.min.css">
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/echarts-all-3.js"></script>
+    <script src="../Lib/echarts-engine.js"></script>
+</head>
+<body class="prediction2">
+<div id="wrapper">
+@@include('./include/head.html')
+@@include('./include/nav_bar.html')
+<div class="content">
+
+<div class="map">
+    <img src="../images/prediction2.jpg">
+</div>
+
+<ul class="ct-right">
+    <li class="box">
+        <div class="angle">港行安全事件实时预警</div>
+        <div class="box-bg">
+            <div class="box-ct prediction">
+                <ul>
+                    <li>
+                        <div class="pre-icon">
+                            <i class="iconfont icon-dunpaieps"></i>
+                        </div>
+                        <div>
+                            <div class="time">2017-1-10 10:10</div>
+                            <p>在微山港鲁运6A01船舶走私钢铁</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div  class="pre-icon">
+                            <i class="iconfont icon-dunpaieps"></i>
+                        </div>
+                        <div>
+                            <div class="time">2017-1-10 10:10</div>
+                            <p>在微山港鲁运6F320船舶走钢铁</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="more">
+                    <span>更多</span>
+                    <i class="iconfont icon-jiantou"></i>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="box">
+        <div class="angle">港行安全事件趋势及预测</div>
+        <div class="box-bg">
+            <div id="chart_ghyc" class="box-ct"></div>
+        </div>
+    </li>
+    <li class="box">
+        <div class="angle">港行安全事件预警类型</div>
+        <div class="box-bg">
+            <div id="chart_ghyj" class="box-ct"></div>
+        </div>
+    </li>
+</ul>
+
+</div>
+@@include('./include/prediction_foot.html')
+</div>
+<script src="../js/prediction2.js"></script>
+</body>
+</html>
